@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chạm âm Đông Hồ</title>
+<meta name="description" content="How a set of Đông Hồ folk paintings was carved into relief and paired with an app that speaks whatever your fingertip is resting on.">
+<link rel="icon" href="images/logo-mark.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="images/logo-mark.jpg" alt="T.O.U.C.H logo: a carp drawn inside a fingerprint">
+    <span>
+      <span class="brand-name">T.O.U.C.H</span>
+      <span class="brand-sub">Chạm âm Đông Hồ</span>
+    </span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="how-the-app-works.html">How the app works</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ───────────────────────── hero ───────────────────────── -->
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Tradition Opened Up Through Creative Hands</p>
+        <h1>Chạm âm<br><span class="fish">Đông Hồ</span></h1>
+        <p class="hero-tag">Carved reliefs · A phone on a stand · A voice</p>
+        <p class="hero-lede">
+          Three Đông Hồ folk paintings, re-cut as something you can feel with your hands —
+          and an app that <strong>watches your fingertip and says out loud what you are touching</strong>.
+        </p>
+        <div class="hero-links">
+          <a class="btn btn-solid" href="#why">Read the story</a>
+          <a class="btn" href="how-the-app-works.html">How the app works</a>
+        </div>
+      </div>
+
+      <figure class="demo">
+        <div class="demo-plate" id="plate">
+          <img src="images/tranh-1.jpg" alt="The carved relief plate of the Đông Hồ rooster, cut in green lino">
+          <div class="fingertip" id="ring" aria-hidden="true"></div>
+        </div>
+        <div class="demo-readout" aria-live="polite">
+          <p class="demo-label" id="demo-label">Gà dạ xướng · the rooster plate</p>
+          <p class="demo-vi" id="demo-vi">Di ngón tay trên bản khắc để nghe từng chi tiết.</p>
+          <p class="demo-en" id="demo-en">Move a finger across the plate. This is roughly what the app does, in a browser.</p>
+          <button class="demo-speak" id="demo-speak" type="button" hidden>Nghe mô tả</button>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ───────────────────── 01 · why ───────────────────── -->
+  <section class="chapter wrap" id="why">
+    <div class="chapter-head">
+      <div class="chapter-num">01</div>
+      <div>
+        <p class="eyebrow">Why we started</p>
+        <h2>“Please do not touch”</h2>
+
+        <div class="prose">
+          <p>
+            Đông Hồ painting comes out of one village in Bắc Ninh. The outlines are printed from
+            carved woodblocks onto <em>giấy điệp</em>, paper brushed with crushed seashell so it
+            glitters, and every colour is ground from something you could pick up off the ground:
+            red from stone, yellow from sophora flowers, blue from indigo leaves, black from burnt
+            bamboo. People used to buy them for Tết, paste them on the wall, and live with them for
+            a year.
+          </p>
+          <p>
+            For a blind visitor, a room full of them is a room full of closed doors. The sign on the
+            wall says <em>do not touch</em>, and in front of a painting that sentence quietly means
+            something else: this was not made with you in mind.
+          </p>
+          <p>
+            Description doesn't close the gap either. Being told “it's a rooster, red and green,
+            standing on grass” is a summary of a painting. It is not an encounter with one. You
+            don't learn that the tail is built from long feathers stacked one over the other, or
+            that the ruff around the neck is cut as rows of fine parallel lines, until your own
+            finger crosses them.
+          </p>
+          <p>
+            That seemed like a loss worth doing something about. Not a translation of the painting
+            into words, but a way to put the painting itself into someone's hands — and then have
+            it answer when they ask what they have just found.
+          </p>
+          <p class="vi">
+            Tranh Đông Hồ vốn để treo, để ngắm. Với người khiếm thị, đó là một vẻ đẹp luôn nằm sau
+            một tấm biển “không chạm vào hiện vật”.
+          </p>
+        </div>
+
+        <div class="plates plates-2">
+          <figure>
+            <img src="images/tranh-2.jpg" alt="The rooster relief, painted in red, green and yellow, raised above a white backing board">
+            <figcaption><b>Gà dạ xướng</b>The rooster, finished. Every line you can see here is also a line you can feel.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/tranh-3.jpg" alt="The relief of a boy playing a flute on a buffalo's back, with a lotus leaf held overhead">
+            <figcaption><b>Chăn trâu thổi sáo</b>The boy on the buffalo, with a lotus leaf for a parasol — one of the three paintings in the set.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────── 02 · making ───────────────────── -->
+  <section class="chapter wrap" id="making">
+    <div class="chapter-head">
+      <div class="chapter-num">02</div>
+      <div>
+        <p class="eyebrow">How it was made</p>
+        <h2>Cut it, raise it, then teach it to talk</h2>
+
+        <div class="prose">
+          <p>
+            There was no shortcut available. A relief that reads under the fingers has to be carved
+            by hand, one line at a time, and the app only became worth building once there was
+            something real on the table for it to look at.
+          </p>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-tag">Step 1</div>
+            <div>
+              <h3>Carving the plate</h3>
+              <div class="prose">
+                <p>
+                  The Đông Hồ design is traced onto a lino plate and cut with gouges, the same way
+                  the village cuts its woodblocks — except here the carving is not a tool for
+                  printing. The carving <em>is</em> the artwork. Everything that will later be read
+                  by a fingertip has to be decided at this stage: how deep a groove goes, how wide a
+                  ridge is, how much space to leave between two feathers so they stay two feathers
+                  and not one bump.
+                </p>
+              </div>
+              <div class="plates plates-2">
+                <figure>
+                  <img src="images/step1-1.jpg" alt="Carving the rooster design into a green lino plate with a gouge">
+                  <figcaption><b>Step 1</b>Cutting the outline of the rooster into the plate.</figcaption>
+                </figure>
+                <figure>
+                  <img src="images/step1-2.jpg" alt="Close-up of the gouge cutting fine parallel lines into the rooster's neck ruff">
+                  <figcaption><b>Step 1</b>The neck ruff: rows of fine parallel ridges, which is what makes it recognisable by touch.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-tag">Step 2</div>
+            <div>
+              <h3>Raising it off the page</h3>
+              <div class="prose">
+                <p>
+                  The carved shapes are cut free, then glued down onto a backing board in layers, so
+                  the picture stands above the surface instead of sitting flat on it. Layering is
+                  what gives a hand somewhere to go: the tail sits above the body, the buffalo's
+                  head sits above its shoulder, and the edge between them is a step a finger can
+                  find without being told where to look.
+                </p>
+                <p>
+                  Then it is painted — red, green, yellow, black — so the piece still works as a
+                  Đông Hồ painting for anyone looking at it. A sighted child and a blind child can
+                  stand at the same table and be looking at the same thing.
+                </p>
+              </div>
+              <div class="plates plates-2">
+                <figure>
+                  <img src="images/step2-1.jpg" alt="Gluing a cut-out carved piece onto the backing board beside the assembled relief">
+                  <figcaption><b>Step 2</b>Each piece is cut free and glued down in layers.</figcaption>
+                </figure>
+                <figure>
+                  <img src="images/step2-2.jpg" alt="Hands resting on the finished raised relief of the rooster">
+                  <figcaption><b>Step 2</b>Checking the result the way it will actually be used — with both hands, eyes off the board.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-tag">Step 3</div>
+            <div>
+              <h3>Writing the app</h3>
+              <div class="prose">
+                <p>
+                  The relief tells you a shape is there. It can't tell you the bird is crowing, or
+                  that the carp is looking at a reflection of the moon. That is the part the phone
+                  does: it sits on a small stand above the painting, watches the hand below it, and
+                  speaks.
+                </p>
+                <p>
+                  Most of the work went into the unglamorous half — finding a hand on camera
+                  without assuming a skin tone, knowing the difference between a finger passing over
+                  a detail and a finger stopping on one, and getting an answer back fast enough that
+                  nobody standing at the table has to wonder whether it is broken.
+                </p>
+              </div>
+
+              <div class="plates plates-2">
+                <figure>
+                  <img src="images/coding.jpg" alt="Working on the app's source code on a laptop">
+                  <figcaption><b>Step 3</b>Building the pointing loop in Flutter.</figcaption>
+                </figure>
+                <figure>
+                  <img src="images/endproduct-1.jpg" alt="Two finished reliefs on a table with a phone clamped to a desk stand above them">
+                  <figcaption><b>The setup</b>A phone on a stand, two paintings, nothing else to install or wear.</figcaption>
+                </figure>
+              </div>
+
+              <!-- Draft copy: replace the two paragraphs below with your own description of the app. -->
+              <div class="card">
+                <span class="card-flag">Draft — rewrite in your own words</span>
+                <h3>What the app does</h3>
+                <div class="prose">
+                  <p>
+                    You put a painting under the stand and open the app. It looks once at what is on
+                    the table, works out which of the three Đông Hồ pieces it is, and reads that
+                    painting's story aloud — the legend behind it, what the animals stand for, why
+                    people hung it at Tết.
+                  </p>
+                  <p>
+                    Then it goes quiet and watches your hand. Rest a fingertip on any part of the
+                    relief and hold it still for about a second; the app takes that moment as a
+                    question, looks at what is under your finger, and answers in Vietnamese. Lift
+                    your hand, move somewhere else, and it is ready for the next one. There is
+                    nothing to tap, and nothing to hold.
+                  </p>
+                  <p class="vi">
+                    <a href="how-the-app-works.html">Xem chi tiết cách ứng dụng hoạt động →</a>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────── 03 · events ───────────────────── -->
+  <section class="chapter wrap" id="events">
+    <div class="chapter-head">
+      <div class="chapter-num">03</div>
+      <div>
+        <p class="eyebrow">Out of the workshop</p>
+        <h2>Putting it on a table in front of strangers</h2>
+
+        <div class="prose">
+          <p>
+            A project like this can look finished on a desk and fall apart the moment someone else
+            touches it. So the reliefs and the phone went out to public events, set up the way
+            anyone could walk up to them: two paintings, a stand, and no explanation until someone
+            asked.
+          </p>
+          <p>
+            What a real table teaches you is mostly about hands. People reach with the flat of the
+            palm before they reach with one finger. They pass over a detail three times before
+            stopping on it. They ask about the thing in the corner, not the thing in the middle.
+            Every one of those habits turned into a change in the app — how long a pause counts as
+            a question, how far a hand has to travel before the next answer is allowed, how much
+            the app should say before it lets go and listens again.
+          </p>
+        </div>
+
+        <div class="plates plates-2">
+          <figure>
+            <img src="images/endproduct-2.jpg" alt="Visitors at an exhibition table leaning over the reliefs, one pointing at the buffalo painting under the phone stand">
+            <figcaption><b>At the event</b>A visitor pointing at the buffalo while the rest of the group waits for the answer.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/endproduct-1.jpg" alt="The two finished reliefs photographed from above with the phone stand in frame">
+            <figcaption><b>The booth</b>The whole exhibit: two paintings and one phone.</figcaption>
+          </figure>
+        </div>
+
+        <!-- Add the real reactions here. Two slots left for quotes you heard at the events. -->
+        <div class="prose" style="margin-top: 2rem;">
+          <blockquote class="pull">
+            “<span style="color: var(--muted)">Quote from a visitor goes here — something someone
+            actually said at the table.</span>”
+            <cite>Who said it · which event</cite>
+          </blockquote>
+          <blockquote class="pull">
+            “<span style="color: var(--muted)">And a second one here.</span>”
+            <cite>Who said it · which event</cite>
+          </blockquote>
+          <p class="vi">
+            Phần này đang để trống chờ lời kể của bạn về phản ứng của khách tham quan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────── 04 · blind kids ───────────────────── -->
+  <section class="chapter wrap" id="next">
+    <div class="chapter-head">
+      <div class="chapter-num">04</div>
+      <div>
+        <p class="eyebrow">What happens next</p>
+        <h2>The people it was actually built for</h2>
+
+        <div class="prose">
+          <p>
+            Everyone who has used it so far could see. They closed their eyes, which is a useful
+            test and not the same test. The next step is to bring the paintings and the phone to
+            blind children and let them decide whether any of this works.
+          </p>
+          <p>
+            We expect to be wrong about a lot of it. The descriptions were written by people who
+            learned these paintings by looking at them, and they are probably full of words that
+            only mean something if you have seen the thing already. The parts of the relief that
+            feel obvious to us may be the parts nobody finds. The plan is to sit down, say nothing,
+            watch what they reach for first, and then rewrite the app around their questions
+            instead of ours.
+          </p>
+          <p class="vi">
+            Bước tiếp theo: mang tranh và ứng dụng đến với các em nhỏ khiếm thị, và sửa lại mọi thứ
+            theo những gì các em hỏi.
+          </p>
+        </div>
+
+        <!-- PLACEHOLDER: swap this file for a real photo from the school visit. -->
+        <div class="plates">
+          <figure class="ph">
+            <img src="images/placeholder-kids.jpg" alt="Placeholder image, to be replaced with a photograph from the visit to the school for blind children">
+            <figcaption><b>Coming soon</b>Placeholder image. This will be replaced with photographs from the first visit.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot wrap">
+  <div class="foot-grid">
+    <img src="images/logo-full.jpg" alt="T.O.U.C.H — Tradition Opened Up Through Creative Hands — Chạm âm Đông Hồ">
+    <div>
+      <p>
+        <strong>T.O.U.C.H · Chạm âm Đông Hồ.</strong> Three Đông Hồ folk paintings carved into
+        relief, and an Android app that describes whatever your fingertip is resting on.
+      </p>
+      <p>
+        <a href="how-the-app-works.html">How the app works →</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// The hero demo: nearest labelled point to the cursor, within a radius.
+// Deliberately simple — it is a taste of the app, not a copy of it.
+const REGIONS = [
+  { x: .31, y: .15, label: "Khung chữ · the cartouche",
+    vi: "Khung chữ Hán cùng dải lá uốn ở góc trên, lời chúc đầu năm được khắc nổi hẳn lên.",
+    en: "A Hán-character cartouche with a curling leaf scroll in the top corner: a New Year wish, raised clear of the board." },
+  { x: .76, y: .33, label: "Đầu và mào · head and comb",
+    vi: "Mào gà dựng cao thành từng múi, mắt là một vòng tròn, mỏ hé mở như đang gáy.",
+    en: "The comb stands up in lobes, the eye is a raised ring, and the beak is open mid-crow." },
+  { x: .70, y: .49, label: "Lông cổ · the neck ruff",
+    vi: "Vòng lông cổ khắc thành những đường song song, sờ vào đều như răng lược.",
+    en: "The ruff is cut as rows of parallel lines — under a fingertip it feels like the teeth of a comb." },
+  { x: .27, y: .57, label: "Đuôi · the tail",
+    vi: "Đuôi là nhiều lớp lông dài cong vút, lớp sau cao hơn lớp trước.",
+    en: "The tail is several layers of long curved feathers, each one raised above the last." },
+  { x: .53, y: .66, label: "Thân và cánh · body and wing",
+    vi: "Thân phủ lông hình giọt nước; giữa cánh có một mảng hoa văn xoáy tròn.",
+    en: "The body is covered in teardrop feathers, with a round spiral pattern set into the wing." },
+  { x: .53, y: .86, label: "Chân · the legs",
+    vi: "Hai chân chắc khoẻ, có cựa, móng bám xuống dải cỏ bên dưới.",
+    en: "Two strong legs with spurs, the claws gripping the band of grass below." },
+  { x: .30, y: .93, label: "Cỏ · the grass",
+    vi: "Dải cỏ chạy dọc chân tranh, khắc thành từng túm nhọn.",
+    en: "A strip of grass along the bottom edge, carved as sharp tufts." }
+];
+
+const REST = {
+  label: "Gà dạ xướng · the rooster plate",
+  vi: "Di ngón tay trên bản khắc để nghe từng chi tiết.",
+  en: "Move a finger across the plate. This is roughly what the app does, in a browser."
+};
+
+const plate = document.getElementById('plate');
+const ring = document.getElementById('ring');
+const elLabel = document.getElementById('demo-label');
+const elVi = document.getElementById('demo-vi');
+const elEn = document.getElementById('demo-en');
+const speakBtn = document.getElementById('demo-speak');
+
+let current = null;
+
+function show(region) {
+  if (region === current) return;
+  current = region;
+  const r = region || REST;
+  elLabel.textContent = r.label;
+  elVi.textContent = r.vi;
+  elEn.textContent = r.en;
+  speakBtn.hidden = !region || !('speechSynthesis' in window);
+}
+
+function track(event) {
+  const box = plate.getBoundingClientRect();
+  const x = (event.clientX - box.left) / box.width;
+  const y = (event.clientY - box.top) / box.height;
+  ring.style.left = (x * 100) + '%';
+  ring.style.top = (y * 100) + '%';
+  plate.classList.add('is-active');
+
+  let best = null, bestDistance = Infinity;
+  for (const region of REGIONS) {
+    const dx = region.x - x, dy = region.y - y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    if (distance < bestDistance) { bestDistance = distance; best = region; }
+  }
+  show(bestDistance < .16 ? best : null);
+}
+
+plate.addEventListener('pointermove', track);
+plate.addEventListener('pointerdown', track);
+plate.addEventListener('pointerleave', () => {
+  plate.classList.remove('is-active');
+  show(null);
+});
+
+speakBtn.addEventListener('click', () => {
+  if (!current || !('speechSynthesis' in window)) return;
+  try {
+    speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(current.vi);
+    utterance.lang = 'vi-VN';
+    speechSynthesis.speak(utterance);
+  } catch (error) { /* no voice available; the text is on screen anyway */ }
+});
+</script>
+
+</body>
+</html>

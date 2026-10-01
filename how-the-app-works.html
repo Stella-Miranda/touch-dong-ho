@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How the app works</title>
+<meta name="description" content="The pointing loop behind Chạm âm Đông Hồ: finding a hand on camera, deciding when a pause is a question, and answering out loud.">
+<link rel="icon" href="images/logo-mark.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="images/logo-mark.jpg" alt="T.O.U.C.H logo: a carp drawn inside a fingerprint">
+    <span>
+      <span class="brand-name">T.O.U.C.H</span>
+      <span class="brand-sub">Chạm âm Đông Hồ</span>
+    </span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="how-the-app-works.html" aria-current="page">How the app works</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-head wrap">
+    <p class="eyebrow">How the app works</p>
+    <h1>Point at the painting. It tells you what you found.</h1>
+    <div class="prose">
+      <p>
+        An Android phone sits on a small desk stand, looking down at the relief. There is no glove,
+        no sensor under the board, no markers printed on the painting — just the camera, the hand,
+        and a voice. The whole thing is one loop, repeated for as long as someone keeps touching
+        the picture.
+      </p>
+    </div>
+
+    <div class="plates plates-2">
+      <figure>
+        <img src="images/endproduct-1.jpg" alt="Two carved reliefs on a table with a phone clamped to a desk stand looking down at them">
+        <figcaption><b>The setup</b>One phone, one stand, and the painting flat on the table underneath.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/step2-2.jpg" alt="Both hands resting on the raised relief of the rooster">
+        <figcaption><b>The input</b>Two hands on a relief. Everything the app knows comes from watching them.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="chapter wrap">
+    <div class="chapter-head">
+      <div class="chapter-num">↻</div>
+      <div>
+        <p class="eyebrow">The loop</p>
+        <h2>Six steps, then back to the beginning</h2>
+
+        <div class="loop">
+
+          <div class="loop-step">
+            <div class="loop-n">1</div>
+            <div>
+              <h3>Work out which painting is on the table</h3>
+              <p>
+                The app takes one frame and asks a vision model which of the three Đông Hồ pieces it
+                is looking at — <em>Lý ngư vọng nguyệt</em>, <em>Gà dạ xướng</em> or
+                <em>Chăn trâu thổi sáo</em>. The model answers with a short code, so the reply can be
+                matched with a plain text check and nothing depends on it phrasing the title
+                correctly.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">2</div>
+            <div>
+              <h3>Read that painting's story aloud</h3>
+              <p>
+                The introduction is <strong>not generated</strong>. Each of the three is a fixed
+                script, written by us and spoken word for word, because that is where the cultural
+                detail lives: the five virtues of the rooster, the <em>cá chép hóa rồng</em> legend
+                behind the carp watching the moon, the lotus leaf over the boy on the buffalo. A
+                model looking at a photograph would thin all of that out or get it wrong. Its job
+                here is recognition only.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">3</div>
+            <div>
+              <h3>Find the hand</h3>
+              <p>
+                Every camera frame arrives already split into brightness and colour. The app samples
+                the colour values on a grid and sorts them into two groups — the painting, and
+                whatever is in front of it. The smaller, distinctly coloured group is the hand, and
+                its centre is where the finger is.
+              </p>
+              <p>
+                This matters more than it sounds. The obvious approach is to look for a fixed range
+                of skin tones, and the obvious approach fails for exactly the people you most want
+                it to work for: a different skin tone, a warm lamp, a dim room. Splitting whatever is
+                actually in the frame into two colours has no opinion about what a hand should look
+                like.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">4</div>
+            <div>
+              <h3>Decide that a pause is a question</h3>
+              <p>
+                Hands wander. The app only treats a position as a question when the fingertip stays
+                inside a <span class="spec">30 px</span> radius for <span class="spec">800 ms</span>.
+                Shorter than that and every sweep across the board would set off an answer; longer
+                and the thing feels unresponsive. The numbers came from watching people use it at a
+                table, not from a spec.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">5</div>
+            <div>
+              <h3>Capture, ask, and start talking</h3>
+              <p>
+                That moment is turned into a small JPEG — downsampled as it is converted, on a
+                background thread, so the camera preview never freezes — and sent to the model
+                together with the point the finger is resting on.
+              </p>
+              <p>
+                The answer is streamed back and spoken sentence by sentence as it arrives, instead of
+                waiting for the whole paragraph. Standing at the table, that is the difference
+                between a device that is thinking and a device that is broken.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">6</div>
+            <div>
+              <h3>Let go and wait for the next one</h3>
+              <p>
+                Once the answer has been spoken, the app will not repeat itself for the same spot.
+                The hand has to travel more than <span class="spec">100 px</span> away before a new
+                question can be asked — so resting a finger where it already is stays silent, and
+                moving on starts the loop again at step 3.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter wrap">
+    <div class="chapter-head">
+      <div class="chapter-num">※</div>
+      <div>
+        <p class="eyebrow">Two decisions worth explaining</p>
+        <h2>Running it on a free API quota</h2>
+
+        <div class="prose">
+          <p>
+            A booth session is a few hundred requests in an afternoon, and this project runs on free
+            tiers. So the app does not use one model — it rotates between two fast ones, starting
+            with a different one each capture, which splits a session's requests across two separate
+            quota pools instead of draining one.
+          </p>
+          <p>
+            When both are rate-limited it falls back to a larger model with much higher limits but a
+            much slower answer, and the interface says so rather than leaving someone standing in
+            silence. These endpoints also fail transiently often enough that one attempt each isn't
+            enough, so a capture works through the whole list up to three times with a short pause
+            between passes. A healthy model answers on the first try, so in the normal case the
+            retries cost nothing.
+          </p>
+          <p class="vi">
+            Mô hình được chọn theo hạn mức miễn phí của API, chứ không chỉ theo tốc độ hay chất lượng
+            câu trả lời.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Built with</h3>
+          <div class="prose">
+            <p>
+              Flutter, running on Android. The camera stream, the hand-finding and the dwell timer
+              all run on the phone; only the two questions — which painting is this, and what is
+              under this finger — go out over the network. Text-to-speech is the phone's own
+              Vietnamese voice.
+            </p>
+          </div>
+        </div>
+
+        <div class="plates plates-2">
+          <figure>
+            <img src="images/coding.jpg" alt="Working on the app's source code on a laptop">
+            <figcaption><b>Step 3 of the build</b>Most of the work was in the loop above, not in the model.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/endproduct-2.jpg" alt="Visitors at an exhibition table pointing at a relief under the phone stand">
+            <figcaption><b>The real test</b>Every number on this page was changed at least once because of a table like this one.</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot wrap">
+  <div class="foot-grid">
+    <img src="images/logo-full.jpg" alt="T.O.U.C.H — Tradition Opened Up Through Creative Hands — Chạm âm Đông Hồ">
+    <div>
+      <p>
+        <strong>T.O.U.C.H · Chạm âm Đông Hồ.</strong> Three Đông Hồ folk paintings carved into
+        relief, and an Android app that describes whatever your fingertip is resting on.
+      </p>
+      <p>
+        <a href="index.html">← Back to the story</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
