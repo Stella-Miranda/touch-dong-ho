@@ -566,23 +566,25 @@ figcaption b {
 
 .foot-grid {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
 }
 
-.foot img {
-  width: 150px;
-  background: #fbf8f1;
+/* The banner is printed artwork on white, so like the nav mark it keeps a
+   white ground in both themes. */
+.foot-banner {
+  width: 100%;
+  max-width: 52rem;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  background: #fff;
   border: 1px solid var(--rule);
-  border-radius: 8px;
-  padding: .5rem;
+  border-radius: 10px;
+  padding: clamp(.75rem, 2vw, 1.25rem) clamp(1rem, 3vw, 2rem);
 }
 
 .foot p {
-  margin: 0;
-  max-width: 44ch;
+  margin: 0 auto;
+  max-width: 52ch;
   font-size: 1rem;
   color: var(--muted);
 }
@@ -593,7 +595,6 @@ figcaption b {
 
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: minmax(0, 1fr); }
-  .plates-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px) {
