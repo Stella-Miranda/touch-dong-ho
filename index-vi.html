@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chạm âm Đông Hồ</title>
+<meta name="description" content="Hành trình khắc lại ba bức tranh dân gian Đông Hồ thành phù điêu, cùng một ứng dụng đọc to điều mà đầu ngón tay bạn đang chạm vào.">
+<link rel="icon" href="images/logo-mark.jpg">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="vi" href="index-vi.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index-vi.html">
+    <img src="images/logo-mark.jpg" alt="Logo T.O.U.C.H: hình con cá chép vẽ trong một dấu vân tay">
+    <span>
+      <span class="brand-name">T.O.U.C.H</span>
+      <span class="brand-sub">Chạm âm Đông Hồ</span>
+    </span>
+  </a>
+  <nav class="nav" aria-label="Chính">
+    <a href="index-vi.html" aria-current="page">Trang chủ</a>
+    <a href="how-the-app-works-vi.html">Cách ứng dụng hoạt động</a>
+  </nav>
+  <a class="lang-switch" href="index.html" hreflang="en" lang="en">English</a>
+</header>
+
+<main>
+
+  <!-- ───────────────────────── mở đầu ───────────────────────── -->
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Truyền thống được mở ra qua những đôi tay sáng tạo</p>
+        <h1>Chạm âm<br><span class="fish">Đông Hồ</span></h1>
+        <p class="hero-tag">Phù điêu chạm khắc · Điện thoại trên giá đỡ · Một giọng nói</p>
+        <p class="hero-lede">
+          Ba bức tranh dân gian Đông Hồ được khắc lại thành thứ có thể cảm nhận bằng đôi tay —
+          cùng một ứng dụng <strong>dõi theo đầu ngón tay bạn và đọc to điều bạn đang chạm vào</strong>.
+        </p>
+        <div class="hero-links">
+          <a class="btn btn-solid" href="#vi-sao">Đọc câu chuyện</a>
+          <a class="btn" href="how-the-app-works-vi.html">Cách ứng dụng hoạt động</a>
+        </div>
+      </div>
+
+      <figure class="demo">
+        <div class="demo-plate" id="plate">
+          <img src="images/tranh-1.jpg" alt="Bản khắc phù điêu con gà Đông Hồ, khắc trên tấm lino xanh">
+          <div class="fingertip" id="ring" aria-hidden="true"></div>
+        </div>
+        <div class="demo-readout" aria-live="polite">
+          <p class="demo-label" id="demo-label">Gà dạ xướng · bản khắc gà</p>
+          <p class="demo-vi" id="demo-vi">Di ngón tay trên bản khắc để nghe từng chi tiết.</p>
+          <button class="demo-speak" id="demo-speak" type="button" hidden>Nghe mô tả</button>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ───────────────────── 01 · vì sao ───────────────────── -->
+  <section class="chapter wrap" id="vi-sao">
+    <div class="chapter-head">
+      <div class="chapter-num">01</div>
+      <div>
+        <p class="eyebrow">Vì sao chúng tôi bắt đầu</p>
+        <h2>“Xin đừng chạm vào”</h2>
+
+        <div class="prose">
+          <p>
+            Tranh Đông Hồ ra đời từ một làng nhỏ ở Bắc Ninh. Nét vẽ được in từ những bản khắc gỗ
+            lên <em>giấy điệp</em> — loại giấy quét vỏ điệp giã mịn nên óng ánh — còn màu sắc đều
+            được nghiền ra từ những thứ nhặt được ngay trong tự nhiên: đỏ từ sỏi son, vàng từ hoa
+            hòe, xanh từ lá chàm, đen từ than lá tre. Ngày trước, người ta mua tranh về dịp Tết,
+            dán lên tường, và sống cùng bức tranh ấy suốt một năm.
+          </p>
+          <p>
+            Nhưng với một người khiếm thị, cả căn phòng treo đầy tranh ấy lại là một căn phòng đầy
+            những cánh cửa đóng kín. Tấm biển trên tường ghi <em>“không chạm vào hiện vật”</em>, và
+            đứng trước một bức tranh, câu nói ấy lặng lẽ mang một nghĩa khác: thứ này không được
+            làm ra cho bạn.
+          </p>
+          <p>
+            Lời mô tả cũng không lấp được khoảng trống đó. Nghe ai đó nói “đây là một con gà, màu
+            đỏ và xanh, đứng trên cỏ” chỉ là một bản tóm tắt bức tranh, chứ không phải một lần được
+            gặp gỡ nó. Bạn sẽ không biết rằng cái đuôi được xếp từ nhiều lớp lông dài chồng lên
+            nhau, hay vòng lông quanh cổ được khắc thành những đường song song mảnh, cho đến khi
+            chính ngón tay mình lướt qua chúng.
+          </p>
+          <p>
+            Đó là một sự thiệt thòi đáng để làm điều gì đó. Không phải là chuyển bức tranh thành
+            lời, mà là cách đặt chính bức tranh ấy vào đôi tay một ai đó — rồi để nó lên tiếng trả
+            lời khi họ hỏi mình vừa chạm vào điều gì.
+          </p>
+        </div>
+
+        <div class="plates plates-2">
+          <figure>
+            <img src="images/tranh-2.jpg" alt="Phù điêu con gà, sơn màu đỏ, xanh và vàng, nổi lên trên tấm bìa nền trắng">
+            <figcaption><b>Gà dạ xướng</b>Con gà đã hoàn thiện. Mọi đường nét nhìn thấy ở đây đều có thể cảm nhận được bằng tay.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/tranh-3.jpg" alt="Phù điêu cậu bé thổi sáo trên lưng trâu, cầm một chiếc lá sen che phía trên đầu">
+            <figcaption><b>Chăn trâu thổi sáo</b>Cậu bé ngồi trên lưng trâu, chiếc lá sen làm ô che — một trong ba bức tranh của bộ sưu tập.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────── 02 · quá trình ───────────────────── -->
+  <section class="chapter wrap" id="qua-trinh">
+    <div class="chapter-head">
+      <div class="chapter-num">02</div>
+      <div>
+        <p class="eyebrow">Quá trình thực hiện</p>
+        <h2>Khắc nó, nâng nó lên, rồi dạy nó lên tiếng</h2>
+
+        <div class="prose">
+          <p>
+            Không có đường tắt nào cho việc này. Một tấm phù điêu để đôi tay có thể “đọc” được phải
+            được khắc thủ công, từng nét một, và chiếc ứng dụng chỉ thực sự đáng để xây dựng khi đã
+            có một thứ thật sự nằm trên bàn để nó nhìn vào.
+          </p>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-tag">Bước 1</div>
+            <div>
+              <h3>Khắc bản</h3>
+              <div class="prose">
+                <p>
+                  Hình mẫu Đông Hồ được đồ lên một tấm lino rồi khắc bằng dao khắc, giống hệt cách
+                  làng khắc bản gỗ in tranh xưa nay — chỉ khác là ở đây, bản khắc không phải là
+                  công cụ để in. Bản khắc <em>chính là</em> tác phẩm. Mọi thứ mà sau này một đầu
+                  ngón tay sẽ “đọc” được đều phải được quyết định ngay từ bước này: rãnh khắc sâu
+                  bao nhiêu, gờ nổi rộng bao nhiêu, khoảng cách giữa hai chiếc lông phải chừa bao
+                  nhiêu để chúng vẫn là hai chiếc lông riêng biệt chứ không dính thành một khối.
+                </p>
+              </div>
+              <div class="plates plates-2">
+                <figure>
+                  <img src="images/step1-1.jpg" alt="Khắc đường viền con gà lên tấm lino xanh bằng dao khắc">
+                  <figcaption><b>Bước 1</b>Khắc đường viền con gà lên tấm bản.</figcaption>
+                </figure>
+                <figure>
+                  <img src="images/step1-2.jpg" alt="Cận cảnh dao khắc đang khắc những đường song song mảnh ở vòng lông cổ con gà">
+                  <figcaption><b>Bước 1</b>Vòng lông cổ: những hàng gờ song song mảnh, chính là chi tiết giúp nhận ra bằng xúc giác.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-tag">Bước 2</div>
+            <div>
+              <h3>Nâng hình khỏi mặt phẳng</h3>
+              <div class="prose">
+                <p>
+                  Những hình đã khắc được cắt rời rồi dán lên tấm bìa nền theo từng lớp, để bức
+                  tranh nổi hẳn lên khỏi bề mặt thay vì nằm phẳng trên đó. Chính việc xếp lớp cho
+                  bàn tay một nơi để “đi”: cái đuôi nằm cao hơn thân, đầu con trâu nằm cao hơn vai
+                  nó, và đường ranh giới giữa hai lớp ấy là một bậc thềm nhỏ mà ngón tay có thể tự
+                  tìm ra, không cần ai chỉ dẫn.
+                </p>
+                <p>
+                  Sau đó tranh được tô màu — đỏ, xanh, vàng, đen — để tác phẩm vẫn là một bức tranh
+                  Đông Hồ đúng nghĩa với bất kỳ ai nhìn vào nó. Một đứa trẻ sáng mắt và một đứa trẻ
+                  khiếm thị có thể cùng đứng trước một chiếc bàn và cùng “nhìn” vào một thứ.
+                </p>
+              </div>
+              <div class="plates plates-2">
+                <figure>
+                  <img src="images/step2-1.jpg" alt="Dán một mảnh đã khắc rời lên tấm bìa nền, bên cạnh bản phù điêu đã lắp ráp">
+                  <figcaption><b>Bước 2</b>Từng mảnh được cắt rời rồi dán xuống theo từng lớp.</figcaption>
+                </figure>
+                <figure>
+                  <img src="images/step2-2.jpg" alt="Hai bàn tay đặt lên bản phù điêu con gà đã hoàn thiện">
+                  <figcaption><b>Bước 2</b>Kiểm tra thành quả đúng như cách nó sẽ được dùng — bằng cả hai tay, mắt không nhìn vào bản.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-tag">Bước 3</div>
+            <div>
+              <h3>Viết ứng dụng</h3>
+              <div class="prose">
+                <p>
+                  Tấm phù điêu cho bạn biết ở đó có một hình khối. Nhưng nó không thể cho bạn biết
+                  con gà đang gáy, hay con cá chép đang ngước nhìn bóng trăng. Đó là phần việc của
+                  chiếc điện thoại: nó đứng trên một giá đỡ nhỏ phía trên bức tranh, dõi theo bàn
+                  tay bên dưới, và cất tiếng.
+                </p>
+                <p>
+                  Phần lớn công sức lại nằm ở nửa việc không mấy hào nhoáng — tìm ra bàn tay qua
+                  camera mà không mặc định một tông màu da nào, phân biệt được lúc nào ngón tay chỉ
+                  lướt qua một chi tiết và lúc nào nó thật sự dừng lại ở đó, rồi trả lời đủ nhanh để
+                  không ai đứng trước bàn phải tự hỏi liệu máy có đang bị treo hay không.
+                </p>
+              </div>
+
+              <div class="plates plates-2">
+                <figure>
+                  <img src="images/coding.jpg" alt="Làm việc trên mã nguồn ứng dụng bằng máy tính xách tay">
+                  <figcaption><b>Bước 3</b>Xây dựng vòng lặp chỉ tay bằng Flutter.</figcaption>
+                </figure>
+                <figure>
+                  <img src="images/endproduct-1.jpg" alt="Hai bản phù điêu hoàn thiện trên bàn, cùng một chiếc điện thoại gắn trên giá đỡ phía trên">
+                  <figcaption><b>Bố trí</b>Một chiếc điện thoại trên giá đỡ, hai bức tranh, không cần cài đặt hay đeo thêm gì khác.</figcaption>
+                </figure>
+              </div>
+
+              <!-- Bản nháp: hãy thay hai đoạn dưới đây bằng lời mô tả của chính bạn. -->
+              <div class="card">
+                <span class="card-flag">Bản nháp — hãy viết lại theo lời của bạn</span>
+                <h3>Ứng dụng làm gì</h3>
+                <div class="prose">
+                  <p>
+                    Bạn đặt một bức tranh dưới giá đỡ rồi mở ứng dụng lên. Nó nhìn một lần vào thứ
+                    đang có trên bàn, nhận ra đây là bức nào trong ba bức Đông Hồ, rồi đọc to câu
+                    chuyện của bức tranh đó — sự tích đằng sau nó, những con vật tượng trưng cho
+                    điều gì, vì sao người ta treo nó vào dịp Tết.
+                  </p>
+                  <p>
+                    Sau đó nó im lặng và dõi theo bàn tay bạn. Đặt đầu ngón tay lên bất kỳ chi tiết
+                    nào trên bản phù điêu và giữ yên khoảng một giây; ứng dụng coi khoảnh khắc đó là
+                    một câu hỏi, nhìn vào vị trí dưới ngón tay bạn, rồi trả lời bằng tiếng Việt.
+                    Nhấc tay lên, di chuyển sang chỗ khác, và nó lại sẵn sàng cho câu hỏi tiếp theo.
+                    Không cần chạm vào nút nào, cũng không cần giữ bất cứ thứ gì.
+                  </p>
+                  <p class="vi">
+                    <a href="how-the-app-works-vi.html">Xem chi tiết cách ứng dụng hoạt động →</a>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────── 03 · thử nghiệm ───────────────────── -->
+  <section class="chapter wrap" id="su-kien">
+    <div class="chapter-head">
+      <div class="chapter-num">03</div>
+      <div>
+        <p class="eyebrow">Ra khỏi xưởng</p>
+        <h2>Đặt nó lên bàn trước những người xa lạ</h2>
+
+        <div class="prose">
+          <p>
+            Một dự án như thế này có thể trông đã hoàn thiện khi còn ở trên bàn làm việc, rồi vỡ
+            vụn ngay khoảnh khắc một người khác chạm vào nó. Vì vậy, các bản phù điêu và chiếc điện
+            thoại đã được mang ra các sự kiện công cộng, bày biện theo cách để bất kỳ ai cũng có
+            thể bước tới: hai bức tranh, một giá đỡ, và không một lời giải thích nào cho đến khi có
+            người hỏi.
+          </p>
+          <p>
+            Điều mà một chiếc bàn thật sự dạy cho bạn phần lớn là về đôi bàn tay. Người ta thường
+            đưa cả lòng bàn tay ra trước khi chỉ bằng một ngón. Họ lướt qua một chi tiết đến ba lần
+            trước khi dừng lại ở đó. Họ hỏi về thứ ở góc tranh, chứ không phải thứ ở giữa. Mỗi thói
+            quen như vậy đều trở thành một thay đổi trong ứng dụng — khoảng dừng bao lâu thì được
+            tính là một câu hỏi, bàn tay phải di chuyển bao xa thì mới được hỏi câu tiếp theo, ứng
+            dụng nên nói bao nhiêu trước khi im lặng và lắng nghe trở lại.
+          </p>
+        </div>
+
+        <div class="plates plates-2">
+          <figure>
+            <img src="images/endproduct-2.jpg" alt="Khách tham quan tại bàn trưng bày cúi xuống xem các bản phù điêu, một người đang chỉ vào bức tranh trâu dưới giá đỡ điện thoại">
+            <figcaption><b>Tại sự kiện</b>Một vị khách chỉ vào bức tranh trâu trong khi cả nhóm chờ nghe câu trả lời.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/endproduct-1.jpg" alt="Hai bản phù điêu hoàn thiện chụp từ trên xuống, có giá đỡ điện thoại trong khung hình">
+            <figcaption><b>Gian trưng bày</b>Toàn bộ gian trưng bày: hai bức tranh và một chiếc điện thoại.</figcaption>
+          </figure>
+        </div>
+
+        <!-- Thêm những phản hồi thật ở đây. Hai chỗ trống cho những câu nói bạn nghe được tại sự kiện. -->
+        <div class="prose" style="margin-top: 2rem;">
+          <blockquote class="pull">
+            “<span style="color: var(--muted)">Chỗ này để trống cho một câu nói thật của khách
+            tham quan tại bàn trưng bày.</span>”
+            <cite>Ai đã nói · sự kiện nào</cite>
+          </blockquote>
+          <blockquote class="pull">
+            “<span style="color: var(--muted)">Và một câu nữa ở đây.</span>”
+            <cite>Ai đã nói · sự kiện nào</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────── 04 · trẻ khiếm thị ───────────────────── -->
+  <section class="chapter wrap" id="tiep-theo">
+    <div class="chapter-head">
+      <div class="chapter-num">04</div>
+      <div>
+        <p class="eyebrow">Điều sắp tới</p>
+        <h2>Những người mà nó thật sự được làm ra cho</h2>
+
+        <div class="prose">
+          <p>
+            Tất cả những người đã dùng thử cho đến nay đều là người sáng mắt. Họ chỉ nhắm mắt lại —
+            một phép thử hữu ích, nhưng không phải là phép thử thật sự. Bước tiếp theo là mang
+            những bức tranh và chiếc điện thoại đến với các em nhỏ khiếm thị, và để chính các em
+            quyết định xem điều này có thực sự hiệu quả hay không.
+          </p>
+          <p>
+            Chúng tôi dự đoán sẽ có rất nhiều điều mình đã làm sai. Những lời mô tả được viết bởi
+            những người học về các bức tranh này bằng cách nhìn vào chúng, nên có lẽ chúng đầy
+            những từ ngữ chỉ có ý nghĩa khi bạn đã từng nhìn thấy thứ đó rồi. Những phần trên bản
+            phù điêu mà chúng tôi thấy hiển nhiên, có thể lại là những phần chẳng ai tìm ra. Dự
+            định là ngồi xuống, không nói gì, quan sát xem các em chạm vào đâu trước tiên, rồi viết
+            lại ứng dụng theo đúng những câu hỏi của các em, chứ không phải của chúng tôi.
+          </p>
+        </div>
+
+        <!-- ẢNH TẠM: hãy thay tệp này bằng ảnh thật từ buổi đến thăm trường. -->
+        <div class="plates">
+          <figure class="ph">
+            <img src="images/placeholder-kids.jpg" alt="Ảnh tạm, sẽ được thay bằng ảnh chụp từ buổi đến thăm trường dành cho trẻ khiếm thị">
+            <figcaption><b>Sắp có</b>Ảnh tạm thời. Sẽ được thay bằng ảnh chụp từ buổi gặp đầu tiên.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot wrap">
+  <div class="foot-grid">
+    <img src="images/logo-full.jpg" alt="T.O.U.C.H — Tradition Opened Up Through Creative Hands — Chạm âm Đông Hồ">
+    <div>
+      <p>
+        <strong>T.O.U.C.H · Chạm âm Đông Hồ.</strong> Ba bức tranh dân gian Đông Hồ được khắc
+        thành phù điêu, cùng một ứng dụng Android mô tả bất cứ điều gì đầu ngón tay bạn đang
+        chạm vào.
+      </p>
+      <p>
+        <a href="how-the-app-works-vi.html">Cách ứng dụng hoạt động →</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Bản demo ở phần mở đầu: tìm điểm có nhãn gần con trỏ nhất, trong một bán kính nhất định.
+// Cố tình giữ đơn giản — đây là một lát cắt của ứng dụng, không phải bản sao của nó.
+const REGIONS = [
+  { x: .31, y: .15, label: "Khung chữ",
+    vi: "Khung chữ Hán cùng dải lá uốn ở góc trên, lời chúc đầu năm được khắc nổi hẳn lên." },
+  { x: .76, y: .33, label: "Đầu và mào",
+    vi: "Mào gà dựng cao thành từng múi, mắt là một vòng tròn, mỏ hé mở như đang gáy." },
+  { x: .70, y: .49, label: "Lông cổ",
+    vi: "Vòng lông cổ khắc thành những đường song song, sờ vào đều như răng lược." },
+  { x: .27, y: .57, label: "Đuôi",
+    vi: "Đuôi là nhiều lớp lông dài cong vút, lớp sau cao hơn lớp trước." },
+  { x: .53, y: .66, label: "Thân và cánh",
+    vi: "Thân phủ lông hình giọt nước; giữa cánh có một mảng hoa văn xoáy tròn." },
+  { x: .53, y: .86, label: "Chân",
+    vi: "Hai chân chắc khoẻ, có cựa, móng bám xuống dải cỏ bên dưới." },
+  { x: .30, y: .93, label: "Cỏ",
+    vi: "Dải cỏ chạy dọc chân tranh, khắc thành từng túm nhọn." }
+];
+
+const REST = {
+  label: "Gà dạ xướng · bản khắc gà",
+  vi: "Di ngón tay trên bản khắc để nghe từng chi tiết."
+};
+
+const plate = document.getElementById('plate');
+const ring = document.getElementById('ring');
+const elLabel = document.getElementById('demo-label');
+const elVi = document.getElementById('demo-vi');
+const speakBtn = document.getElementById('demo-speak');
+
+let current = null;
+
+function show(region) {
+  if (region === current) return;
+  current = region;
+  const r = region || REST;
+  elLabel.textContent = r.label;
+  elVi.textContent = r.vi;
+  speakBtn.hidden = !region || !('speechSynthesis' in window);
+}
+
+function track(event) {
+  const box = plate.getBoundingClientRect();
+  const x = (event.clientX - box.left) / box.width;
+  const y = (event.clientY - box.top) / box.height;
+  ring.style.left = (x * 100) + '%';
+  ring.style.top = (y * 100) + '%';
+  plate.classList.add('is-active');
+
+  let best = null, bestDistance = Infinity;
+  for (const region of REGIONS) {
+    const dx = region.x - x, dy = region.y - y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    if (distance < bestDistance) { bestDistance = distance; best = region; }
+  }
+  show(bestDistance < .16 ? best : null);
+}
+
+plate.addEventListener('pointermove', track);
+plate.addEventListener('pointerdown', track);
+plate.addEventListener('pointerleave', () => {
+  plate.classList.remove('is-active');
+  show(null);
+});
+
+speakBtn.addEventListener('click', () => {
+  if (!current || !('speechSynthesis' in window)) return;
+  try {
+    speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(current.vi);
+    utterance.lang = 'vi-VN';
+    speechSynthesis.speak(utterance);
+  } catch (error) { /* không có giọng đọc khả dụng; phần chữ vẫn hiển thị trên màn hình */ }
+});
+</script>
+
+</body>
+</html>

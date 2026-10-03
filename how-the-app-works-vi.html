@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cách ứng dụng hoạt động</title>
+<meta name="description" content="Vòng lặp đứng sau Chạm âm Đông Hồ: tìm bàn tay qua camera, nhận biết khi nào một khoảng dừng là một câu hỏi, và trả lời bằng giọng nói.">
+<link rel="icon" href="images/logo-mark.jpg">
+<link rel="alternate" hreflang="en" href="how-the-app-works.html">
+<link rel="alternate" hreflang="vi" href="how-the-app-works-vi.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index-vi.html">
+    <img src="images/logo-mark.jpg" alt="Logo T.O.U.C.H: hình con cá chép vẽ trong một dấu vân tay">
+    <span>
+      <span class="brand-name">T.O.U.C.H</span>
+      <span class="brand-sub">Chạm âm Đông Hồ</span>
+    </span>
+  </a>
+  <nav class="nav" aria-label="Chính">
+    <a href="index-vi.html">Trang chủ</a>
+    <a href="how-the-app-works-vi.html" aria-current="page">Cách ứng dụng hoạt động</a>
+  </nav>
+  <a class="lang-switch" href="how-the-app-works.html" hreflang="en" lang="en">English</a>
+</header>
+
+<main>
+
+  <section class="page-head wrap">
+    <p class="eyebrow">Cách ứng dụng hoạt động</p>
+    <h1>Chạm vào bức tranh. Nó sẽ nói cho bạn biết bạn vừa tìm thấy gì.</h1>
+    <div class="prose">
+      <p>
+        Một chiếc điện thoại Android đặt trên giá đỡ nhỏ, hướng xuống bản phù điêu. Không có găng
+        tay, không có cảm biến dưới tấm bản, không có ký hiệu nào in trên tranh — chỉ có camera,
+        bàn tay, và một giọng nói. Tất cả chỉ là một vòng lặp duy nhất, lặp đi lặp lại chừng nào
+        người ta còn chạm vào bức tranh.
+      </p>
+    </div>
+
+    <div class="plates plates-2">
+      <figure>
+        <img src="images/endproduct-1.jpg" alt="Hai bản phù điêu trên bàn, cùng một chiếc điện thoại gắn trên giá đỡ hướng xuống">
+        <figcaption><b>Bố trí</b>Một chiếc điện thoại, một giá đỡ, và bức tranh nằm phẳng trên bàn bên dưới.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/step2-2.jpg" alt="Hai bàn tay đặt lên bản phù điêu con gà đã hoàn thiện">
+        <figcaption><b>Dữ liệu đầu vào</b>Hai bàn tay trên một bản phù điêu. Mọi điều ứng dụng biết đều đến từ việc quan sát chúng.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="chapter wrap">
+    <div class="chapter-head">
+      <div class="chapter-num">↻</div>
+      <div>
+        <p class="eyebrow">Vòng lặp</p>
+        <h2>Sáu bước, rồi quay lại từ đầu</h2>
+
+        <div class="loop">
+
+          <div class="loop-step">
+            <div class="loop-n">1</div>
+            <div>
+              <h3>Nhận biết bức tranh nào đang ở trên bàn</h3>
+              <p>
+                Ứng dụng chụp lại một khung hình và hỏi một mô hình thị giác xem nó đang nhìn vào
+                bức nào trong ba bức Đông Hồ — <em>Lý ngư vọng nguyệt</em>, <em>Gà dạ xướng</em>
+                hay <em>Chăn trâu thổi sáo</em>. Mô hình trả lời bằng một mã ngắn, để câu trả lời
+                có thể được đối chiếu bằng một phép so khớp văn bản đơn giản, không phụ thuộc vào
+                việc nó có viết đúng tên tranh hay không.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">2</div>
+            <div>
+              <h3>Đọc to câu chuyện của bức tranh đó</h3>
+              <p>
+                Phần giới thiệu này <strong>không do mô hình tạo ra</strong>. Mỗi bức trong ba bức
+                đều có một kịch bản cố định, do chúng tôi viết và được đọc nguyên văn từng chữ, bởi
+                đó chính là nơi lưu giữ những chi tiết văn hóa: ngũ đức của con gà trống, sự tích
+                <em>cá chép hóa rồng</em> đằng sau hình ảnh cá chép ngắm trăng, chiếc lá sen che
+                trên đầu cậu bé ngồi lưng trâu. Một mô hình chỉ nhìn vào bức ảnh sẽ làm những chi
+                tiết ấy trở nên sơ sài hoặc sai lệch. Việc của nó ở đây chỉ là nhận diện mà thôi.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">3</div>
+            <div>
+              <h3>Tìm ra bàn tay</h3>
+              <p>
+                Mỗi khung hình camera thu về vốn đã được tách sẵn thành độ sáng và màu sắc. Ứng
+                dụng lấy mẫu giá trị màu theo một lưới ô rồi chia chúng thành hai nhóm — bức tranh,
+                và bất cứ thứ gì nằm phía trước nó. Nhóm nhỏ hơn, có màu sắc khác biệt rõ rệt,
+                chính là bàn tay, và tâm điểm của nhóm đó là vị trí ngón tay.
+              </p>
+              <p>
+                Điều này quan trọng hơn vẻ ngoài của nó. Cách làm hiển nhiên nhất là tìm trong một
+                khoảng tông màu da cố định, nhưng cách làm hiển nhiên ấy lại thất bại đúng với
+                những người mà mình muốn nó phục vụ nhất: một tông da khác, một ngọn đèn ánh vàng,
+                một căn phòng thiếu sáng. Việc chia đôi màu sắc thực tế có trong khung hình không
+                hề mang sẵn định kiến về việc một bàn tay phải trông như thế nào.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">4</div>
+            <div>
+              <h3>Xác định khi nào một khoảng dừng là một câu hỏi</h3>
+              <p>
+                Bàn tay vốn hay di chuyển lung tung. Ứng dụng chỉ coi một vị trí là một câu hỏi khi
+                đầu ngón tay nằm yên trong bán kính <span class="spec">30 px</span> suốt
+                <span class="spec">800 ms</span>. Ngắn hơn vậy thì mỗi lần lướt tay qua bản khắc
+                cũng sẽ kích hoạt một câu trả lời; dài hơn thì ứng dụng lại có cảm giác chậm chạp,
+                không phản hồi. Những con số này đến từ việc quan sát người dùng thật sự tại bàn
+                trưng bày, chứ không phải từ một bản đặc tả kỹ thuật nào.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">5</div>
+            <div>
+              <h3>Chụp lại, đặt câu hỏi, và bắt đầu lên tiếng</h3>
+              <p>
+                Khoảnh khắc đó được chuyển thành một tệp JPEG nhỏ — được giảm độ phân giải ngay
+                trong lúc chuyển đổi, chạy trên một luồng xử lý nền để khung hình xem trước của
+                camera không bao giờ bị đứng hình — rồi được gửi đến mô hình cùng với tọa độ điểm
+                mà ngón tay đang đặt vào.
+              </p>
+              <p>
+                Câu trả lời được truyền về và đọc lên từng câu một ngay khi nhận được, thay vì chờ
+                đợi toàn bộ đoạn văn trả lời xong xuôi. Đứng trước bàn trưng bày, đó chính là ranh
+                giới giữa một thiết bị đang suy nghĩ và một thiết bị đã bị treo.
+              </p>
+            </div>
+          </div>
+
+          <div class="loop-step">
+            <div class="loop-n">6</div>
+            <div>
+              <h3>Buông ra và chờ câu hỏi tiếp theo</h3>
+              <p>
+                Sau khi câu trả lời đã được đọc xong, ứng dụng sẽ không lặp lại chính nó cho cùng
+                một vị trí. Bàn tay phải di chuyển xa hơn <span class="spec">100 px</span> thì một
+                câu hỏi mới mới được đặt ra — vì vậy nếu cứ để ngón tay yên tại chỗ cũ, ứng dụng sẽ
+                im lặng, còn khi di chuyển sang chỗ khác, vòng lặp lại bắt đầu từ bước 3.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter wrap">
+    <div class="chapter-head">
+      <div class="chapter-num">※</div>
+      <div>
+        <p class="eyebrow">Hai quyết định đáng được giải thích</p>
+        <h2>Vận hành trong giới hạn API miễn phí</h2>
+
+        <div class="prose">
+          <p>
+            Một buổi trưng bày có thể tiêu tốn đến vài trăm lượt gọi chỉ trong một buổi chiều,
+            trong khi dự án này vận hành hoàn toàn trên các gói miễn phí. Vì vậy ứng dụng không chỉ
+            dùng một mô hình duy nhất — nó luân phiên giữa hai mô hình nhanh, bắt đầu bằng một mô
+            hình khác nhau ở mỗi lượt chụp, để các yêu cầu trong một buổi được chia đều cho hai hạn
+            mức riêng biệt thay vì dồn hết vào một.
+          </p>
+          <p>
+            Khi cả hai mô hình đều đã chạm giới hạn, ứng dụng sẽ chuyển sang một mô hình lớn hơn
+            với hạn mức cao hơn nhiều nhưng trả lời chậm hơn nhiều, và giao diện sẽ báo rõ điều đó
+            thay vì để người dùng đứng chờ trong im lặng. Những điểm cuối này cũng thỉnh thoảng gặp
+            lỗi tạm thời đủ thường xuyên để một lần thử cho mỗi mô hình là chưa đủ, nên mỗi lượt
+            chụp sẽ thử lại toàn bộ danh sách tối đa ba lần, với một khoảng nghỉ ngắn giữa các lần
+            thử. Một mô hình đang hoạt động tốt thường trả lời ngay từ lần đầu, nên trong trường
+            hợp bình thường, những lần thử lại này không tốn thêm chi phí nào.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Được xây dựng bằng</h3>
+          <div class="prose">
+            <p>
+              Flutter, chạy trên Android. Luồng hình ảnh từ camera, việc tìm bàn tay và bộ đếm thời
+              gian dừng đều chạy ngay trên điện thoại; chỉ có hai câu hỏi — đây là bức tranh nào, và
+              dưới ngón tay này là gì — mới được gửi ra ngoài qua mạng. Chức năng đọc văn bản dùng
+              chính giọng đọc tiếng Việt có sẵn trên điện thoại.
+            </p>
+          </div>
+        </div>
+
+        <div class="plates plates-2">
+          <figure>
+            <img src="images/coding.jpg" alt="Làm việc trên mã nguồn ứng dụng bằng máy tính xách tay">
+            <figcaption><b>Bước 3 của quá trình xây dựng</b>Phần lớn công sức nằm ở vòng lặp phía trên, chứ không phải ở mô hình.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/endproduct-2.jpg" alt="Khách tham quan tại bàn trưng bày đang chỉ vào một bản phù điêu dưới giá đỡ điện thoại">
+            <figcaption><b>Phép thử thật sự</b>Mỗi con số trên trang này đều đã được chỉnh sửa ít nhất một lần, vì những buổi trưng bày như thế này.</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot wrap">
+  <div class="foot-grid">
+    <img src="images/logo-full.jpg" alt="T.O.U.C.H — Tradition Opened Up Through Creative Hands — Chạm âm Đông Hồ">
+    <div>
+      <p>
+        <strong>T.O.U.C.H · Chạm âm Đông Hồ.</strong> Ba bức tranh dân gian Đông Hồ được khắc
+        thành phù điêu, cùng một ứng dụng Android mô tả bất cứ điều gì đầu ngón tay bạn đang
+        chạm vào.
+      </p>
+      <p>
+        <a href="index-vi.html">← Quay lại câu chuyện</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
